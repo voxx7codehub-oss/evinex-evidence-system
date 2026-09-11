@@ -1,0 +1,24 @@
+{
+  "name": "evinex-evidence-system",
+  "version": "1.0.0",
+  "description": "EVINEX - Secure Evidence Management System with Strict Role-Based Access Control",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd backend && npm run dev",
+    "dev:client": "cd frontend && npm start",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "cd backend && npm run build",
+    "build:client": "cd frontend && npm run build",
+    "test": "concurrently \"npm run test:server\" \"npm run test:client\"",
+    "test:server": "cd backend && npm test",
+    "test:client": "cd frontend && npm test"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
